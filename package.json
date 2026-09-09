@@ -1,0 +1,21 @@
+{
+  "name": "sky16-cafe-clone",
+  "version": "1.0.0",
+  "description": "Full clone of Sky16 Cafe Coorg website with SPA routing, complete static assets, and local backend API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "py": "python server.py",
+    "test": "python test_server.py"
+  },
+  "keywords": [
+    "sky16",
+    "coorg",
+    "clone",
+    "react",
+    "spa"
+  ],
+  "author": "",
+  "license": "ISC"
+}

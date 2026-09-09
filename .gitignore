@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+
+# Local scratch and crawler scripts
+full_crawler.py
+inspect_mbh.py
+inspect_portfolio.py
+study_portfolio.py
+test_server.py
+scratch_*.json
+all_original_sections.json
+detailed_original_sections.json
+original_sections.json
+sections_text_summary.json
+
+# Environment / OS files
+.DS_Store
+Thumbs.db
+*.log

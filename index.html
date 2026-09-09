@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicon Links -->
+    <link rel="icon" type="image/png" href="/images-sky-16/SKY-FAVICON.png" />
+    <link rel="apple-touch-icon" href="/images-sky-16/SKY-FAVICON.png" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Sky16 Cafe & Retreat | Best Café & Destination in Coorg</title>
+    <meta name="description" content="Welcome to Sky16 Cafe & Retreat, Coorg's premier café. Savor gourmet coffees, authentic mountain teas, Sky16 Monster Burgers, wood-fired pizzas, comforting bites, 50ft giant swings, and luxury chalets in a cozy, scenic atmosphere." />
+    <meta name="keywords" content="cafe in Coorg, coffee shop Coorg, best cafe in Kushalnagar, restaurant in Coorg, Sky16 Cafe, Kaveri Nisargadhama cafe, wood-fired pizza Coorg, food delivery Coorg, Swiggy Zomato Coorg" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://skydinecoorg.com/" />
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sky16 Cafe & Retreat | Best Café & Destination in Coorg" />
+    <meta property="og:description" content="Discover Coorg's premium cafe and destination retreat near Kaveri Nisargadhama. Savor fresh artisan coffees, authentic mountain teas, custom burgers, wood-fired pizzas, and high-altitude adventures." />
+    <meta property="og:image" content="/images-sky-16/sky16-logo-official.png" />
+    <meta property="og:site_name" content="Sky16 Cafe & Retreat" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Mystic Brew House Official Compiled Stylesheet -->
+    <link rel="stylesheet" crossorigin href="/assets/mystic-tailwind.css" />
+
+    <style>
+      /* Enhanced Brand Logo with Radiant Glow Effect */
+      @keyframes logoGlowPulse {
+        0%, 100% {
+          filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.85))
+                  drop-shadow(0 0 20px rgba(234, 88, 12, 0.65))
+                  drop-shadow(0 0 40px rgba(214, 90, 49, 0.45))
+                  drop-shadow(0 0 70px rgba(226, 168, 80, 0.25))
+                  brightness(1.22) contrast(1.15);
+        }
+        50% {
+          filter: drop-shadow(0 0 14px rgba(249, 115, 22, 1))
+                  drop-shadow(0 0 30px rgba(234, 88, 12, 0.85))
+                  drop-shadow(0 0 55px rgba(214, 90, 49, 0.6))
+                  drop-shadow(0 0 90px rgba(226, 168, 80, 0.4))
+                  brightness(1.3) contrast(1.2);
+        }
+      }
+
+      .brand-logo-img {
+        height: 70px !important;
+        max-height: 78px !important;
+        width: auto !important;
+        object-fit: contain !important;
+        display: block !important;
+        filter: drop-shadow(0 0 6px rgba(249, 115, 22, 0.4)) contrast(1.08) !important;
+        transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease !important;
+      }
+      .brand-logo-img:hover {
+        transform: scale(1.04) !important;
+        filter: drop-shadow(0 0 12px rgba(249, 115, 22, 0.9)) 
+                drop-shadow(0 0 26px rgba(234, 88, 12, 0.65)) 
+                brightness(1.2) contrast(1.15) !important;
+      }
+      @media (max-width: 640px) {
+        .brand-logo-img {
+          height: 52px !important;
+          max-height: 58px !important;
+        }
+      }
+
+      .brand-logo-footer {
+        height: 88px !important;
+        max-height: 96px !important;
+        width: auto !important;
+        object-fit: contain !important;
+        display: block !important;
+        animation: logoGlowPulse 4s ease-in-out infinite !important;
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease !important;
+        cursor: pointer;
+      }
+      .brand-logo-footer:hover {
+        transform: scale(1.04) !important;
+        filter: drop-shadow(0 0 18px rgba(249, 115, 22, 1))
+                drop-shadow(0 0 38px rgba(234, 88, 12, 0.95))
+                drop-shadow(0 0 70px rgba(214, 90, 49, 0.75))
+                brightness(1.35) contrast(1.25) !important;
+      }
+
+    </style>
+  </head>
+  <body class="bg-cafe-light text-cafe-dark font-sans overflow-x-hidden selection:bg-cafe-accent selection:text-cafe-light">
+    
+    <!-- React Root Mount -->
+    <div id="root"></div>
+
+    <!-- Main Mystic Brew House Application Bundle -->
+    <script type="module" crossorigin src="/assets/sky16-app.js"></script>
+  </body>
+</html>

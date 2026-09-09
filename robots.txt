@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sky16coorg.com/sitemap.xml
