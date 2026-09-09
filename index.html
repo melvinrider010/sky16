@@ -89,6 +89,87 @@
                 brightness(1.35) contrast(1.25) !important;
       }
 
+      /* Adventure & Stay Structured Styling */
+      .adventure-grid {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 1.5rem;
+      }
+      @media (min-width: 768px) {
+        .adventure-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      .adventure-card {
+        background: #25120a;
+        border: 1px solid rgba(192, 130, 87, 0.25);
+        border-radius: 1.25rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+      .adventure-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(192, 130, 87, 0.6);
+        box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.5);
+      }
+      .adventure-card-img-wrap {
+        height: 220px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+      }
+      .adventure-card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .adventure-card:hover .adventure-card-img {
+        transform: scale(1.06);
+      }
+
+      /* Stay Section Structured Layout */
+      .stay-gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 1.25rem;
+      }
+      @media (min-width: 768px) {
+        .stay-gallery-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+      .stay-photo-card {
+        border-radius: 1.25rem;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        height: 260px;
+        background: #180b06;
+      }
+      .stay-photo-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .stay-photo-card:hover img {
+        transform: scale(1.06);
+      }
+      .stay-amenities-grid {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 1.25rem;
+      }
+      @media (min-width: 640px) {
+        .stay-amenities-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
     </style>
   </head>
   <body class="bg-cafe-light text-cafe-dark font-sans overflow-x-hidden selection:bg-cafe-accent selection:text-cafe-light">

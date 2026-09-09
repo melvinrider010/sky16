@@ -239,7 +239,8 @@ function AdvSection(){
 
   return f.jsxs("section", {
     id: "adventure",
-    className: "py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#180b06] via-[#221008] to-[#140804] text-white relative border-b border-[#3a190c]/50 overflow-hidden",
+    className: "py-16 px-4 sm:px-6 lg:px-8 text-white relative border-b border-black overflow-hidden",
+    style: { backgroundColor: "#140804" },
     children: [
       f.jsxs("div", {
         className: "max-w-7xl mx-auto text-center relative z-10",
@@ -249,38 +250,38 @@ function AdvSection(){
             children: [f.jsx("span", { children: "🌲" }), f.jsx("span", { children: "Ultimate Thrills" })]
           }),
           f.jsx("h2", {
-            className: "text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight mb-3",
+            className: "text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight mb-2",
             children: "Feel The Rush"
           }),
           f.jsx("p", {
-            className: "text-sm sm:text-base text-amber-100/70 italic max-w-xl mx-auto mb-14 font-serif",
+            className: "text-xs sm:text-sm text-amber-100/70 italic max-w-xl mx-auto mb-10 font-serif",
             children: '"Adventure is out there. You just have to be fast enough to catch it."'
           }),
           f.jsx("div", {
-            className: "grid grid-cols-1 md:grid-cols-3 gap-8 text-left",
+            className: "adventure-grid text-left",
             children: rides.map((r, idx) => f.jsxs("div", {
               key: idx,
-              className: "bg-[#25120a] border border-cafe-accent/20 rounded-3xl overflow-hidden group hover:border-cafe-accent/50 transition-all duration-300 shadow-xl hover:-translate-y-2",
+              className: "adventure-card group",
               children: [
                 f.jsxs("div", {
-                  className: "h-60 overflow-hidden relative",
+                  className: "adventure-card-img-wrap",
                   children: [
                     f.jsx("img", {
                       src: r.img,
                       alt: r.title,
-                      className: "w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      className: "adventure-card-img"
                     }),
                     f.jsx("div", {
-                      className: "absolute top-4 right-4 bg-cafe-accent text-white text-[10px] font-mono font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md",
+                      className: "absolute top-3 right-3 bg-cafe-accent text-white text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider shadow-md z-10",
                       children: r.tag
                     })
                   ]
                 }),
                 f.jsxs("div", {
-                  className: "p-6 space-y-2",
+                  className: "p-5 space-y-2 flex-1 flex flex-col justify-between",
                   children: [
                     f.jsx("h3", {
-                      className: "font-serif text-2xl font-bold text-white",
+                      className: "font-serif text-xl font-bold text-white",
                       children: r.title
                     }),
                     f.jsx("p", {
@@ -316,7 +317,8 @@ function StaySection(){
 
   return f.jsxs("section", {
     id: "stay",
-    className: "py-20 px-4 sm:px-6 lg:px-8 bg-[#0e0502] text-white relative border-b border-[#3a190c]/50",
+    className: "py-16 px-4 sm:px-6 lg:px-8 text-white relative border-b border-black",
+    style: { backgroundColor: "#0f0502" },
     children: [
       f.jsxs("div", {
         className: "max-w-7xl mx-auto text-center relative z-10",
@@ -326,79 +328,39 @@ function StaySection(){
             children: [f.jsx("span", { children: "🏡" }), f.jsx("span", { children: "Luxury Chalet Stay" })]
           }),
           f.jsx("h2", {
-            className: "text-3xl sm:text-5xl font-serif font-bold text-white tracking-tight mb-3",
+            className: "text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight mb-2",
             children: "Stay Above The Ordinary"
           }),
           f.jsx("p", {
-            className: "text-sm sm:text-base text-amber-100/75 max-w-2xl mx-auto mb-12 font-sans",
+            className: "text-xs sm:text-sm text-amber-100/75 max-w-2xl mx-auto mb-10 font-sans",
             children: "Why rush back when you can wake up to the view? Our wooden chalets are designed for comfort, calm, and connection with nature."
           }),
-          f.jsxs("div", {
-            className: "grid grid-cols-1 lg:grid-cols-3 gap-5 mb-12",
-            children: [
-              f.jsxs("div", {
-                className: "lg:col-span-2 h-[320px] sm:h-[440px] rounded-3xl overflow-hidden relative group border border-white/10 shadow-2xl",
-                children: [
-                  f.jsx("img", {
-                    src: stayPhotos[0].img,
-                    alt: stayPhotos[0].caption,
-                    className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  }),
-                  f.jsx("div", {
-                    className: "absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6",
-                    children: f.jsx("span", {
-                      className: "font-serif text-lg sm:text-xl font-bold text-white",
-                      children: stayPhotos[0].caption
-                    })
+          f.jsx("div", {
+            className: "stay-gallery-grid mb-10",
+            children: stayPhotos.map((photo, idx) => f.jsxs("div", {
+              key: idx,
+              className: "stay-photo-card group shadow-lg",
+              children: [
+                f.jsx("img", {
+                  src: photo.img,
+                  alt: photo.caption
+                }),
+                f.jsx("div", {
+                  className: "absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent flex items-end p-4",
+                  children: f.jsx("span", {
+                    className: "font-serif text-sm sm:text-base font-bold text-white",
+                    children: photo.caption
                   })
-                ]
-              }),
-              f.jsxs("div", {
-                className: "grid grid-cols-2 lg:grid-cols-1 gap-5 h-[200px] sm:h-[440px]",
-                children: [
-                  f.jsxs("div", {
-                    className: "rounded-3xl overflow-hidden relative group border border-white/10 shadow-xl h-full",
-                    children: [
-                      f.jsx("img", {
-                        src: stayPhotos[1].img,
-                        alt: stayPhotos[1].caption,
-                        className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      }),
-                      f.jsx("div", {
-                        className: "absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4",
-                        children: f.jsx("span", {
-                          className: "font-mono text-xs font-bold text-white",
-                          children: stayPhotos[1].caption
-                        })
-                      })
-                    ]
-                  }),
-                  f.jsxs("div", {
-                    className: "rounded-3xl overflow-hidden relative group border border-white/10 shadow-xl h-full",
-                    children: [
-                      f.jsx("img", {
-                        src: stayPhotos[2].img,
-                        alt: stayPhotos[2].caption,
-                        className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                      }),
-                      f.jsx("div", {
-                        className: "absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end p-4",
-                        children: f.jsx("span", {
-                          className: "font-mono text-xs font-bold text-white",
-                          children: stayPhotos[2].caption
-                        })
-                      })
-                    ]
-                  })
-                ]
-              })
-            ]
+                })
+              ]
+            }))
           }),
           f.jsxs("div", {
-            className: "grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-4xl mx-auto mb-10 text-center",
+            className: "stay-amenities-grid max-w-4xl mx-auto mb-10 text-center",
             children: [
               f.jsxs("div", {
-                className: "p-5 rounded-2xl bg-white/5 border border-white/10",
+                className: "p-4 rounded-xl border border-white/10",
+                style: { backgroundColor: "rgba(255,255,255,0.04)" },
                 children: [
                   f.jsx("div", { className: "text-2xl mb-1", children: "🛏️" }),
                   f.jsx("h4", { className: "font-serif text-base font-bold text-white", children: "Cozy & Luxury Rooms" }),
@@ -406,7 +368,8 @@ function StaySection(){
                 ]
               }),
               f.jsxs("div", {
-                className: "p-5 rounded-2xl bg-white/5 border border-white/10",
+                className: "p-4 rounded-xl border border-white/10",
+                style: { backgroundColor: "rgba(255,255,255,0.04)" },
                 children: [
                   f.jsx("div", { className: "text-2xl mb-1", children: "🌄" }),
                   f.jsx("h4", { className: "font-serif text-base font-bold text-white", children: "Nature Views" }),
@@ -414,7 +377,8 @@ function StaySection(){
                 ]
               }),
               f.jsxs("div", {
-                className: "p-5 rounded-2xl bg-white/5 border border-white/10",
+                className: "p-4 rounded-xl border border-white/10",
+                style: { backgroundColor: "rgba(255,255,255,0.04)" },
                 children: [
                   f.jsx("div", { className: "text-2xl mb-1", children: "☕" }),
                   f.jsx("h4", { className: "font-serif text-base font-bold text-white", children: "Peaceful Environment" }),
@@ -430,14 +394,15 @@ function StaySection(){
                 href: "https://www.makemytrip.com/hotels/hotel-details/?checkin=02282026&checkout=03012026&city=Coorg&country=India&roomStayQualifier=2e0e&hotelId=202602141252203418&locusId=locusId&locusType=city&currency=INR&source=INGO",
                 target: "_blank",
                 rel: "noopener noreferrer",
-                className: "bg-cafe-accent hover:bg-cafe-accent-hover text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded-full transition-all shadow-lg shadow-cafe-accent/30 hover:scale-105",
+                className: "bg-cafe-accent hover:bg-cafe-accent-hover text-white font-bold text-xs uppercase tracking-wider px-7 py-3 rounded-full transition-all shadow-md hover:scale-105",
                 children: "Book on MakeMyTrip"
               }),
               f.jsx("a", {
                 href: "https://wa.me/918296316161?text=Hi%20Sky16%20Cafe,%20I%20would%20like%20to%20inquire%20about%20booking%20a%20chalet%20stay.",
                 target: "_blank",
                 rel: "noopener noreferrer",
-                className: "bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded-full transition-all hover:scale-105",
+                className: "hover:bg-white/10 border border-white/20 text-white font-bold text-xs uppercase tracking-wider px-7 py-3 rounded-full transition-all hover:scale-105",
+                style: { backgroundColor: "rgba(255,255,255,0.06)" },
                 children: "WhatsApp Chalet Enquiry"
               })
             ]
